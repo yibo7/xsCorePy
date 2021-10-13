@@ -1,7 +1,6 @@
 from unittest import TestCase
 
 from tests.db.UserDal import UserDal
-from tests.db.UserEntity import UserEntity
 
 
 class UserDalTest(TestCase):
