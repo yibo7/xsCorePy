@@ -3,7 +3,7 @@ from typing import Any
 from XsCore import XsRegexUtils
 
 
-class XsStringUtils:
+class XsStrings:
 
     @staticmethod
     def clearHtml(html):

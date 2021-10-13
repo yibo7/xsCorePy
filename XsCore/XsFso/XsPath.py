@@ -3,6 +3,7 @@ import os
 
 class XsPath:
 
+
     @staticmethod
     def joinPath(path, *paths):
         return os.path.join(path, *paths)

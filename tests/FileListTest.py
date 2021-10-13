@@ -16,7 +16,7 @@ class FileListTest(TestCase):
 
     def testSubListAsync(self):
         xsFl = XsFileList("D:\work\管理\CoinBig")
-        xsFl.getSubFilesAsync(self.callBackFile)
+        xsFl.getSubFilesAsync(self.callBackFile)  # 类似C#的委托
 
     def callBackFile(self, src):
         print(src)

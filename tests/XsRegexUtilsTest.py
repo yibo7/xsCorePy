@@ -1,12 +1,12 @@
 import re
 from unittest import TestCase
 
-from XsCore import XsHttpUtils, XsRegexUtils
+from XsCore import XsRegexUtils, XsHttp
 
 
 class FileListTest(TestCase):
     def testFindStrToList(self):
-        htmlc = XsHttpUtils.getHtml('http://www.beimai.com/baike/243a107743b0c.html')
+        htmlc = XsHttp.getHtml('http://www.beimai.com/baike/243a107743b0c.html')
 
         rzs = XsRegexUtils.FindStrToList(
             r'(?:(?:http:\/\/)|(?:https:\/\/))?(?:[\w](?:[\w\-]{0,61}[\w])?\.)+[a-zA-Z]{2,6}(?:\/)', htmlc)
