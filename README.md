@@ -3,12 +3,14 @@
 
 ### 安装本库:
 > pip install xsCorePy
+> 
+pypi主页:
+https://pypi.org/project/xsCorePy/
 
 
-如果你是项目使用者可以忽略以下，以后给开发者写的项目打包流程：
 
 ### 模块打包并上传到pypi：
-
+如果你是项目使用者可以忽略以下，以下是给开发者写的项目打包流程：
 
 ##### 一.建立setup.py文件
 setup.py要与当前项目的父级文件夹同一级别,具体参照本项目
