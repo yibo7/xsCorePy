@@ -11,7 +11,7 @@ from setuptools import setup, find_packages  # 这个包没有可以pip一下
 
 setup(
     name="xsCorePy",  # 这个是pip项目发布的名称
-    version="1.0.0",  # 版本号，pip默认安装最新版
+    version="1.0.1",  # 版本号，pip默认安装最新版
     keywords=("utils", "xsCorePy"),
     description="模块描述",
     long_description="模块详细描述",
@@ -24,5 +24,5 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     platforms="any",
-    install_requires=["configparser","requests","pycryptodome","apscheduler","sqlalchemy"]  # 该模块需要的第三方库
+    install_requires=["configparser","requests","pycryptodome","apscheduler","sqlalchemy","chardet"]  # 该模块需要的第三方库
 )

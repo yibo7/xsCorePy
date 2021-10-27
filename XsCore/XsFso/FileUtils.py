@@ -6,6 +6,28 @@ import os
 import logging
 import shutil
 import zipfile
+import chardet
+
+
+def getFileCode(src):
+    """
+    读取文件的编码
+    :param src: 文件路径
+    :return: 编码格式
+    """
+    with open(src, "rb") as fr:  # 先用二进制打开
+        data = fr.read()  # 读取文件内容
+        return chardet.detect(data).get('encoding')  # 得到文件的编码格式
+
+
+def readFileAnyCode(src) -> str:
+    """
+    使用当前这个文件的编码来读取这个文件，所以不用指定编码
+    :param src: 文件路径
+    :return: 内容
+    """
+    file_encoding = getFileCode(src)
+    return readFile(src, file_encoding)
 
 
 def readFile(src, enc="utf-8") -> str:
@@ -20,9 +42,25 @@ def readFile(src, enc="utf-8") -> str:
     return file_content
 
 
-def writeFile(src, file_content: str, enc="utf-8"):
-    with open(src, "w", encoding=enc) as fw:
-        fw.write(file_content)
+def writeFileAnyCode(src, file_content: str) -> bool:
+    """
+    使用当前这个文件的编码来写文件，所以不用考虑文件编码
+    :param src:文件路径
+    :param file_content:内容
+    :return:是否成功
+    """
+    file_encoding = getFileCode(src)
+    return writeFile(src, file_content, file_encoding)
+
+
+def writeFile(src, file_content: str, enc="utf-8") -> bool:
+    try:
+        with open(src, "w", encoding=enc) as fw:
+            fw.write(file_content)
+        return True
+    except Exception as err:
+        logging.error(f"出错了:{err}")
+        return False
 
 
 def getFileSize(src):

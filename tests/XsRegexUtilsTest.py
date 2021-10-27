@@ -6,10 +6,17 @@ from XsCore import XsRegexUtils, XsHttp
 
 class FileListTest(TestCase):
     def testFindStrToList(self):
-        htmlc = XsHttp.getHtml('http://www.beimai.com/baike/243a107743b0c.html')
+        htmlc = XsHttp.getText('http://www.beimai.com/baike/243a107743b0c.html')
 
         rzs = XsRegexUtils.FindStrToList(
             r'(?:(?:http:\/\/)|(?:https:\/\/))?(?:[\w](?:[\w\-]{0,61}[\w])?\.)+[a-zA-Z]{2,6}(?:\/)', htmlc)
+        for url in rzs:
+            print(url)
+
+    def testFindStrToList(self):
+        htmlc = XsHttp.getText('http://www.beimai.com/baike/243a107743b0c.html')
+
+        rzs = XsRegexUtils.FindStrToList(r'[\u4e00-\u9fa5]+', htmlc)
         for url in rzs:
             print(url)
 

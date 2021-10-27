@@ -89,7 +89,7 @@ class XsStrings:
         return isinstance(obj, str)
 
     @staticmethod
-    def is_empty(input_string: Any) -> bool:
+    def is_empty(input_string: str) -> bool:
         """
         检查字符串是否为空（它必须至少包含一个非空格字符）
         *Examples:*
@@ -103,7 +103,7 @@ class XsStrings:
         :type input_string: str
         :return: True if not empty, false otherwise.
         """
-        return XsStringUtils.isString(input_string) and input_string.strip() == ''
+        return input_string.strip() == ''
 
     @staticmethod
     def is_number(input_string: str) -> bool:

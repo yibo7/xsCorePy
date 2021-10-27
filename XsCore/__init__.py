@@ -12,3 +12,4 @@ from .EmailSender import *
 from .DingRobot import *
 from .XsJob import *
 from .XsPool import *
+from .XsDialogs import *

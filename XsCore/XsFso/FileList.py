@@ -17,8 +17,13 @@ class XsFileList:
 
     def getSubFilesAsync(self, callBack):
         self.__fun = callBack
-        thr = threading.Thread(target=self.__scanFiles, args=(self._path,))
+        thr = threading.Thread(target=self.__startScan)  # , args=(self._path,)
         thr.start()
+
+    def __startScan(self):
+        self.__scanFiles(self._path)
+        if self.__fun is not None:
+            self.__fun("--end--")
 
     def __scanFiles(self, parentPath):
         # time.sleep(1)

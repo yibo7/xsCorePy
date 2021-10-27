@@ -21,7 +21,7 @@ class StringUtilsTest(TestCase):
         print(rzs)
 
     def testSplit(self):
-        rzs = XsStrings.split("ab cnkde fgnkl","nk")
+        rzs = XsStrings.split("ab cnkde fgnkl",",")
         print(rzs)
 
     def testCutStartEnd(self):

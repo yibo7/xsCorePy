@@ -9,6 +9,7 @@ requests = "*"
 pycryptodome = "*"
 apscheduler = "*"
 sqlalchemy = "*"
+chardet = "*"
 
 [dev-packages]
 
