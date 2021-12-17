@@ -13,7 +13,7 @@ class StringUtilsTest(TestCase):
         cf = XsIniUtils("conf/conf.ini")
         print("siteName:", cf.getAppValue('sitename'))
 
-        cf.setAppItem("sitename3", "易站55")
+        cf.setAppItem("sitename3", "binanceusdm,aofex")
 
     def testDefaultInstance(self):
         """

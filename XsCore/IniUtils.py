@@ -74,7 +74,7 @@ class XsIniUtils(ConfigParser):
         :return:
         """
         self.set(self.__default_section, key, value)
-        with open(self._filename, "r+", encoding="utf-8") as fs:
+        with open(self._filename, "w", encoding="utf-8") as fs:
             self.write(fs)
 
 
