@@ -24,5 +24,5 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     platforms="any",
-    install_requires=["configparser","requests","pycryptodome","apscheduler","sqlalchemy","chardet"]  # 该模块需要的第三方库
+    install_requires=["configparser","requests","pycryptodome","apscheduler","sqlalchemy","chardet","dataclasses-json"]  # 该模块需要的第三方库
 )

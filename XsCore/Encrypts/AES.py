@@ -1,6 +1,9 @@
 import base64
 
+# from Crypto.Cipher import AES
+# from crypto.Cipher import AES
 from Crypto.Cipher import AES
+
 """
 AES对称加密，本工具主要实现CBC模式加密,特点：
 1.支持nopadding与非nopadding

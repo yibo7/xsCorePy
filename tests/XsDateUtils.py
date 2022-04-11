@@ -55,6 +55,7 @@ class XsHttpTest(TestCase):
 
     def test_str_to_tuple(self):
         # t_str = '2021-01-05 12:20:01'
+
         t_str = XsDateUtils.get_now_str()
         t = XsDateUtils.str_to_tuple(t_str, format_t="%Y-%m-%d %H:%M:%S")
         print(t)

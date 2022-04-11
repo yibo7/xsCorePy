@@ -4,7 +4,6 @@ from XsCore import Encrypt
 
 
 class EncryptTest(TestCase):
-
     def testmd5EncodeStr(self):
         rz = Encrypt.md5("我是中国人")
         print(rz)
