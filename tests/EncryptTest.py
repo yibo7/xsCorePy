@@ -39,7 +39,7 @@ class EncryptTest(TestCase):
         print(decode)
 
         signData = Encrypt.rsaSignByPrivate(decode, keys["private"])
-        print("明文的签名数据:")
+        print("明文的 签名数据:")
         print(signData)
 
         isok = Encrypt.rsaCheckSignByPublic(decode, signData, keys["public"])
