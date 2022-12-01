@@ -1,6 +1,9 @@
 # xsCorePy
 ### xsCorePy python版工具类
 
+### 运行项目
+> pip install -r requirements.txt
+
 ### 安装本库:
 > pip install xsCorePy
 > 

@@ -9,6 +9,14 @@ import zipfile
 import chardet
 
 
+def is_exists_file(src: str):
+    return os.path.isfile(src)
+
+
+def is_exists_folder(dir_path: str):
+    return os.path.exists(dir_path)
+
+
 def getFileCode(src):
     """
     读取文件的编码
