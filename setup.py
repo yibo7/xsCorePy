@@ -11,7 +11,7 @@ from setuptools import setup, find_packages  # 这个包没有可以pip一下
 
 setup(
     name="xsCorePy",  # 这个是pip项目发布的名称
-    version="1.0.3",  # 版本号，pip默认安装最新版
+    version="1.0.6",  # 版本号，pip默认安装最新版
     keywords=("utils", "xsCorePy"),
     description="模块描述",
     long_description="1.添加日期工具类 2.添加json工具类",

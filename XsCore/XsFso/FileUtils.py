@@ -254,3 +254,17 @@ def compress(src, dest, suffix='zip'):
         logging.info("%s is not supported" % src)
     newZip.close()
     logging.info('compress is successed -> %s' % dest)
+
+
+def get_type_name(filename):
+    """
+    获取文件路径中的文件名称后缀
+    Parameters
+    ----------
+    filename 文件路径或文件名称
+
+    Returns 如  .png,.txt
+    -------
+
+    """
+    return os.path.splitext(filename)[1]

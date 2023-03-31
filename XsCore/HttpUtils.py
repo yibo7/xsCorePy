@@ -34,7 +34,7 @@ class XsHttp:
                     result = r.json() if is_json else r.text
                     return result
                 else:
-                    r = requests.post(url=url, date=param, headers=headers, timeout=time_out, cookies=cookie)
+                    r = requests.post(url=url, data=param, headers=headers, timeout=time_out, cookies=cookie)
                     r.encoding = r.apparent_encoding
                     result = r.json() if is_json else r.text
                     return result
@@ -97,3 +97,15 @@ class XsHttp:
         :return: 返回字典类型JSON对象
         """
         return XsHttp.request(url, "post", content_obj, headers, True, "application/json")
+
+    @staticmethod
+    def postHttpContent(url: str, content_obj={}):
+        """
+        使用post方式请求地址,将一个对象以HttpContent的方式提交
+        :param url: 请求地址
+        :param content_obj:
+        :param headers: 请求头，一个字典对象
+        :return: 返回字典类型JSON对象
+        """
+        headers = {'Content-Type': 'text/plain'}
+        return XsHttp.request(url, "post", content_obj, headers, True)

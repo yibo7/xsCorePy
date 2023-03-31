@@ -16,8 +16,8 @@ class XsJson:
         :param jsonobj: 可以是列表，也可以是字典
         :return:
         """
-        with open(self.save_path, 'w') as fp:
-            json.dump(jsonobj, fp, indent=4)
+        with open(self.save_path, 'w', encoding="utf-8") as fp:
+            json.dump(jsonobj, fp, indent=4, ensure_ascii=False)
 
     def load(self):
         str_json = XsFso.readFile(self.save_path)
